@@ -12,6 +12,12 @@ lazy val root = project
     scalaVersion := scala3Version,
     scalacOptions ++= Seq("-Wsafe-init"),
     run / fork := true,
+    run / javaOptions ++= Seq(
+      "-Xms64M",
+      "-Xmx64M",
+      "-XX:+UseParallelGC",
+      "-verbose:gc",
+    ),
     libraryDependencies ++= Seq(
       "com.softwaremill.sttp.tapir" %% "tapir-core"          % tapirVersion,
       "com.softwaremill.sttp.tapir" %% "tapir-http4s-server" % tapirVersion,

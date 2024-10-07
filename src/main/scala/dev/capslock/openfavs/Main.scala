@@ -11,6 +11,9 @@ object Main extends IOApp {
   def run(args: List[String]): IO[ExitCode] =
     for {
       _ <- scribe.cats.io.info("Openfavs")
+      _ <- scribe.cats.io.info(
+        s"PID ${java.lang.management.ManagementFactory.getRuntimeMXBean.getName}",
+      )
       design = di.Devel.design
       _ <- {
         val sessionResource = for {
