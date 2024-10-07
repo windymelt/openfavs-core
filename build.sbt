@@ -23,7 +23,9 @@ lazy val root = project
     ),
     libraryDependencies += "org.wvlet.airframe" %% "airframe" % airframeVersion,
     libraryDependencies += "com.outr"           %% "scribe"   % scribeVersion,
-    libraryDependencies += "com.outr"      %% "scribe-slf4j2" % scribeVersion,
-    libraryDependencies += "com.outr"      %% "scribe-cats"   % scribeVersion,
-    libraryDependencies += "org.scalameta" %% "munit"         % "1.0.0" % Test,
+    libraryDependencies += "com.outr" %% "scribe-slf4j2" % scribeVersion,
+    libraryDependencies += "com.outr" %% "scribe-cats"   % scribeVersion,
+    libraryDependencies += "com.github.pureconfig" %% "pureconfig-core" % "0.17.7",
+    libraryDependencies += "org.tpolecat"  %% "skunk-core" % "0.6.4",
+    libraryDependencies += "org.scalameta" %% "munit"      % "1.0.0" % Test,
   )

@@ -11,12 +11,11 @@ import com.comcast.ip4s.port
 import com.comcast.ip4s.host
 import Middlewares.{withErrorLogging, logging}
 
-class Web {
+class Web(routing: Routing) {
   val webServer = EmberServerBuilder
     .default[IO]
     .withPort(port"8080")
     .withHost(host"0.0.0.0")
-    .withHttpApp(logging(withErrorLogging(Routing.helloWorldRoute)).orNotFound)
+    .withHttpApp(logging(withErrorLogging(routing.allRoutes)).orNotFound)
     .build
-
 }
