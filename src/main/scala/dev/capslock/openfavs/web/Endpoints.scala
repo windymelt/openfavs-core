@@ -1,8 +1,6 @@
 package dev.capslock.openfavs.web
 
 import sttp.tapir.*
-import cats.effect.IO
-import org.http4s.HttpRoutes
 
 object Endpoints {
   val helloWorldEndpoint =
