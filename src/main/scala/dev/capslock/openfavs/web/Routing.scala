@@ -20,5 +20,5 @@ class Routing(helloWorldApp: application.HelloWorld) {
     ),
   )
 
-  val allRoutes = helloWorldRoute <+> randomRoute
+  val allRoutes = List(helloWorldRoute, randomRoute).foldK
 }
