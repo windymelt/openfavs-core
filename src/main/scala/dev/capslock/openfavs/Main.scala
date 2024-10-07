@@ -4,13 +4,8 @@ import cats.effect.IOApp
 import cats.effect.ExitCode
 import cats.effect.IO
 import cats.syntax.all.{*, given}
-import org.http4s.HttpRoutes
-import org.http4s._, org.http4s.dsl.io._
-import org.http4s.ember.server.EmberServerBuilder
-import cats.effect.std.Dispatcher
 import cats.effect.kernel.Resource
 import wvlet.airframe.surface.Surface
-import dev.capslock.openfavs.di.Devel.design
 
 object Main extends IOApp {
   def run(args: List[String]): IO[ExitCode] =
